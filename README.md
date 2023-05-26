@@ -1,11 +1,11 @@
-About itslive
-=============
+About itslive-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/itslive-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/nasa-jpl/itslive-vortex
 
 Package license: GPL-3.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/itslive-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python client for ITSLIVE gralcier velocity data
 

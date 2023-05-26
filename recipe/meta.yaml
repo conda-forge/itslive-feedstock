@@ -1,5 +1,5 @@
 {% set name = "itslive" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
-  sha256: 4ea54341f8389cde73fdaa4c80365e655a0142a419489f8755cdc91096619572
+  sha256: 75e7b9f60471bb0f0baca39a5be69cc8e84c229ed6020f24262eb1365ecc0062
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=3.8,<4.0
     - shapely >=1.8
-    - matplotlib-base >=3.5
+    - matplotlib-base >=3.6,<3.7
     - pandas ==1.5.1
     - plotext >=0
     - pyproj >=3.3
