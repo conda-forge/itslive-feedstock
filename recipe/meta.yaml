@@ -51,8 +51,8 @@ test:
 about:
   home: https://github.com/nasa-jpl/itslive-vortex
   summary: Python client for ITSLIVE gralcier velocity data
-  license: BSD-3-Clause
-  license_file: LICENSE.txt
+  license: GPL-3.0
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
