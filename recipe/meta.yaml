@@ -1,5 +1,5 @@
 {% set name = "itslive" %}
-{% set version = "0.1.7" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
-  sha256: 75e7b9f60471bb0f0baca39a5be69cc8e84c229ed6020f24262eb1365ecc0062
+  sha256: 455a06f7d3db7facf069a6c42663c6d4dc170cf6ee7c8f94dad4df3ea67677ae
 
 build:
   entry_points:
@@ -35,6 +35,8 @@ requirements:
     - tabulate >=0.9.0
     - xarray >=2022.3
     - zarr >=2.11
+    - earthaccess >=0.5.2
+    - pqdm >=0.2.0
 
 test:
   imports:
