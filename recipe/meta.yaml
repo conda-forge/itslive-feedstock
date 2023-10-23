@@ -1,5 +1,5 @@
 {% set name = "itslive" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
-  sha256: 455a06f7d3db7facf069a6c42663c6d4dc170cf6ee7c8f94dad4df3ea67677ae
+  sha256: 82a13f9a4996254acf3880b40b96e553128c0d298295d51d2525399ab8cfb2a0
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - itslive-plot = itslive.cli.plot:plot
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
