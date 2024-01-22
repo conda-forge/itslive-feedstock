@@ -1,5 +1,5 @@
 {% set name = "itslive" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
-  sha256: 82a13f9a4996254acf3880b40b96e553128c0d298295d51d2525399ab8cfb2a0
+  sha256: 69f247efccb6a0983b8838880320a031184e5c1df3e31e4d54af9cb97eed96e1
 
 build:
   entry_points:
