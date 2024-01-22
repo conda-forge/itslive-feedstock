@@ -3,11 +3,13 @@ About itslive-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/itslive-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/nasa-jpl/itslive-vortex
+Home: https://github.com/nasa-jpl/itslive-py
 
-Package license: GPL-3.0
+Package license: GPL-3.0-only
 
-Summary: Python client for ITSLIVE gralcier velocity data
+Summary: Python client for ITSLIVE glacier velocity data.
+
+Development: https://github.com/nasa-jpl/itslive-py
 
 Current build status
 ====================

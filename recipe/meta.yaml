@@ -49,9 +49,10 @@ test:
     - pip
 
 about:
-  home: https://github.com/nasa-jpl/itslive-vortex
-  summary: Python client for ITSLIVE gralcier velocity data
-  license: GPL-3.0
+  home: https://github.com/nasa-jpl/itslive-py
+  dev_url: https://github.com/nasa-jpl/itslive-py
+  summary: Python client for ITSLIVE glacier velocity data.
+  license: GPL-3.0-only
   license_file: LICENSE
 
 extra:
