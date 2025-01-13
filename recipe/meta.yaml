@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
   sha256: bd38c1ce5c8eccdcbafcf1178864fd45a836cd792f27a31b1dcee0a31452582c
 
 build:
@@ -15,15 +15,15 @@ build:
     - itslive-plot = itslive.cli.plot:plot
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.9.0,<4.0.0
+    - python >={{ python_min }}
     - shapely >=1.8
     - matplotlib-base >=3.6
     - pandas >=1.5.1
@@ -47,6 +47,7 @@ test:
     - itslive-plot --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nasa-jpl/itslive-py
