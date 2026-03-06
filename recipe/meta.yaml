@@ -1,5 +1,5 @@
 {% set name = "itslive" %}
-{% set version = "0.3.2" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/itslive-{{ version }}.tar.gz
-  sha256: bd38c1ce5c8eccdcbafcf1178864fd45a836cd792f27a31b1dcee0a31452582c
+  sha256: 9eb9b05b182cbc90e46db3ab452a110e49ec590811ceda6563a2d4d2a6c0cc98
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - itslive-plot = itslive.cli.plot:plot
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -23,6 +23,7 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
+    - boto3 >=1.28
     - python >={{ python_min }}
     - shapely >=1.8
     - matplotlib-base >=3.6
