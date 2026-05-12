@@ -24,9 +24,9 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}.*
-    - poetry-core >=1.0.0
     - pip
+    - python ${{ python_min }}.*
+    - hatchling
   run:
     - boto3 >=1.28
     - earthaccess >=0.5
