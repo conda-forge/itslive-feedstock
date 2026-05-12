@@ -1,0 +1,76 @@
+schema_version: 1
+
+context:
+  name: itslive
+  version: 0.6.1
+  python_min: "3.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/itslive-${{ version }}.tar.gz
+  sha256: c26b89bf239b4941118353ac833cc401e1f8c78f41f9b09a315be2e4a0f8df36
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - itslive-export = itslive.cli.export:export
+      - itslive-plot = itslive.cli.plot:plot
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core >=1.0.0
+    - pip
+  run:
+    - boto3 >=1.28
+    - earthaccess >=0.5
+    - h3-py >=4.0
+    - matplotlib-base >=3.6
+    - pandas >=1.5
+    - plotext >=0
+    - pqdm >=0.2
+    - pyarrow >=10
+    - pyproj >=3.4
+    - pystac-client >=0.7
+    - python >=${{ python_min }}
+    - python-duckdb >=0.8
+    - requests >=2.28
+    - rich-click >=1.5
+    - rustac >=0.6
+    - s3fs >=2022.3
+    - shapely >=2.0
+    - tabulate >=0.9
+    - xarray >=2022.6
+    - zarr >=2.12
+
+tests:
+  - python:
+      imports:
+        - itslive
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - itslive-export --help
+      - itslive-plot --help
+
+about:
+  homepage: https://nasa-jpl.github.io/itslive-py/
+  repository: https://github.com/nasa-jpl/itslive-py
+  summary: Python client for ITSLIVE glacier velocity data.
+  license: GPL-3.0-only
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - betolink
+    - jhkennedy
+    - weiji14
