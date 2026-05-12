@@ -21,6 +21,7 @@ build:
     entry_points:
       - itslive-export = itslive.cli.export:export
       - itslive-plot = itslive.cli.plot:plot
+      - itslive-search = itslive.cli.search:search
 
 requirements:
   host:
@@ -61,6 +62,7 @@ tests:
     script:
       - itslive-export --help
       - itslive-plot --help
+      - itslive-search --help
 
 about:
   homepage: https://nasa-jpl.github.io/itslive-py/
