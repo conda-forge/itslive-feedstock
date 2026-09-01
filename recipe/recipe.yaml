@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: itslive
-  version: 0.7.3
+  version: "0.7.4"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/itslive-${{ version }}.tar.gz
-  sha256: 93ca68cb746341c268abd54a213e3c1c3c8dd874f8dd1845a2261aa27a1ba771
+  sha256: 33ebe3d0f019b86a5b668d52668517859d1cf3aad3ca47f6d2da30b6285bb1fb
 
 build:
   number: 0
